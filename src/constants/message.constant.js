@@ -1,27 +1,30 @@
+//비번 최소 길이 수입
 import { MIN_PASSWORD_LENGTH } from './auth.constant.js';
+//이력서 최소 길이 수입
 import { MIN_RESUME_LENGTH } from './resume.constant.js';
 
+//메세지 설정
 export const MESSAGES = {
-  AUTH: {
-    COMMON: {
-      EMAIL: {
+  AUTH: { //인증
+    COMMON: { //공통
+      EMAIL: {  //이메일
         REQUIRED: '이메일을 입력해 주세요.',
         INVALID_FORMAT: '이메일 형식이 올바르지 않습니다.',
         DUPLICATED: '이미 가입 된 사용자입니다.',
       },
-      PASSWORD: {
+      PASSWORD: { //비번
         REQURIED: '비밀번호를 입력해 주세요.',
         MIN_LENGTH: `비밀번호는 ${MIN_PASSWORD_LENGTH}자리 이상이어야 합니다.`,
       },
-      PASSWORD_CONFIRM: {
+      PASSWORD_CONFIRM: { //비번 체크
         REQURIED: '비밀번호 확인을 입력해 주세요.',
         NOT_MACHTED_WITH_PASSWORD: '입력 한 두 비밀번호가 일치하지 않습니다.',
       },
-      NAME: {
+      NAME: {   //이름
         REQURIED: '이름을 입력해 주세요.',
       },
-      UNAUTHORIZED: '인증 정보가 유효하지 않습니다.',
-      JWT: {
+      UNAUTHORIZED: '인증 정보가 유효하지 않습니다.', //무효
+      JWT: {  //제이슨 웹 토큰
         NO_TOKEN: '인증 정보가 없습니다.',
         NOT_SUPPORTED_TYPE: '지원하지 않는 인증 방식입니다.',
         EXPIRED: '인증 정보가 만료되었습니다.',
@@ -41,7 +44,7 @@ export const MESSAGES = {
       SUCCEED: '내 정보 조회에 성공했습니다.',
     },
   },
-  RESUMES: {
+  RESUMES: {  //이력서
     COMMON: {
       TITLE: {
         REQUIRED: '제목을 입력해 주세요.',
