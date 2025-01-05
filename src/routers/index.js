@@ -6,8 +6,8 @@ import { requireAccessToken } from '../middlewares/require-access-token.middlewa
 
 const apiRouter = express.Router();
 
-apiRouter.use('/auth', authRouter);
-apiRouter.use('/users', usersRouter);
-apiRouter.use('/resumes', requireAccessToken, resumesRouter);
+apiRouter.use('/auth', authRouter); //인증 라우터
+apiRouter.use('/users', usersRouter);   //유저 라우터
+apiRouter.use('/resumes', requireAccessToken, resumesRouter);   //이력서 라우터
 
 export { apiRouter };
